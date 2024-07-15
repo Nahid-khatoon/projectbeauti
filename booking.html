@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Booking</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color:pink;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Appointment Booking</h1>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="services">Service:</label>
+        <select id="service" name="service">
+          <option value="FACIAL" data-duration="1 hour" data-price="300" data-staff="Fatma" data-location="Darbhanga">Simple facial</option>
+          <option value="FACIAL" data-duration="1 hr" data-price="400" data-staff="Aafiya" data-location="Darbhanga">Diamond facial</option>
+          <option value="FACIAL" data-duration="1 hr 30 min" data-price="1500" data-staff="Nahid" data-location="Darbhanga">Bridal gold facial</option>
+          <option value="FACIAL" data-duration="1 hr" data-price="800" data-staff="Fatma" data-location="Darbhanga">Whitening facial</option>
+          <option value="FACIAL" data-duration="2 hrs" data-price="800" data-staff="Aafiya" data-location="Darbhanga">Acne facial</option>
+     <option value="FACIAL" data-duration="1 hr 30 min" data-price="800" data-staff="Nahid" data-location="Darbhanga">Agind facial  </option>
+          <option value="FACIAL" data-duration="1 hr" data-price="500" data-staff="Fatma" data-location="Darbhanga>Herbal facial</option>
+          <option value="HAIR CUT" data-duration="2 hrs" data-price=" from 300" data-staff="Aafiya" data-location="Darbhanga">Women's hair cut</option>
+     <option value="HAIR CUT" data-duration="1 hr 30 min" data-price=" Feom 150" data-staff="Nahid" data-location="Darbhanga ">Cild'hair cut</option>
+          <option value="HAIR CUT" data-duration="1 hr" data-price="From 200" data-staff="Fatma" data-location="Darbhanga ">Men's hair cut </option>
+          <option value="MANICURED" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Classic Manicure</option>
+     <option value="MANICURED" data-duration="1 hr 30 min" data-price="500" data-staff="Nahid" data-location="Darbhanga ">Spa Manicure 1</option>
+          <option value="MANICURED" data-duration="1 hr" data-price="400" data-staff="Fatma" data-location="Darbhanga ">Gel Manicure</option>
+          <option value="MANICURED" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Deluxe Manicure</option>
+     <option value="MANICURED" data-duration="1 hr 30 min" data-price="500" data-staff="Nahid" data-location="Darbhanga ">Nail Art:</option>
+          <option value="HENNA" data-duration="1 hr" data-price="400" data-staff="Fatma" data-location="Darbhanga ">Both hands only one side henna</option>
+          <option value="HENNA" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Only Legs henna</option>
+     <option value="HENNA" data-duration="1 hr 30 min" data-price="500" data-staff="Nahid" data-location="Darbhanga ">Single side and single hand henna</option>
+          <option value="HENNA" data-duration="1 hr" data-price="400" data-staff="Fatma" data-location="Darbhanga ">Bride henna
+ </option>
+          <option value="WAXING" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Half back waxing</option>
+     <option value="WAXING" data-duration="1 hr 30 min" data-price="500" data-staff="Nahid" data-location="Darbhanga ">Stomach waxing</option>
+          <option value="WAXING" data-duration="1 hr" data-price="400" data-staff="Fatma" data-location="Darbhanga ">Full back waxing</option>
+          <option value="WAXING" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Full body waxing</option>
+        <option value="WEDDING" data-duration="1 hr" data-price="400" data-staff="Nahid" data-location="Darbhanga ">Wedding trial</option>
+          <option value="WEDDING" data-duration="2 hrs" data-price="600" data-staff="Aafiya" data-location="Darbhanga ">Wedding day </option>
+     <option value="WEDDING" data-duration="1 hr 30 min" data-price="500" data-staff="Nahid" data-location="Darbhanga ">Wedding day touch ups</option>
+          <option value="WEDDING" data-duration="1 hr" data-price="400" data-staff="Fatma" data-location="Darbhanga ">Bridemaid and other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="Bhairopatti" readonly>
+      </div>
+      <div class="form-group">
+        <label for="staff">Staff Member:</label>
+        <input type="text" id="staff" name="staff" value="Staff Member" readonly>
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" value="1 hr 30 min" readonly>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="500" readonly>
+      </div>
+         
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+<h2><pre>            <header>
+      <div class="navbar">
+
+   <a href="index.html" id="Home page">*......Home....*</a>
+    
+   <a href="booking.html" id="booking">*.....BOOKING......*</a>
+            
+   <a href="about.html" id="about">*......ABOUT.......*</a>
+            
+   <a href="contactme.html" id="contactme">*.....CONTACT_ME....*</a>
+            
+   <a href="location.html" id="location">*.....LOCATION.....*</a>
+            
+   <a href="service.html" id="service">*......SERVICES......*</a>
+   
+   
+</header></pre></h2>
+    
+
+  <script>
+    // Get references to form elements
+    const serviceSelect = document.getElementById('service');
+    const durationInput = document.getElementById('duration');
+    const priceInput = document.getElementById('price');
+    const staffInput = document.getElementById('staff');
+    const locationInput = document.getElementById('location');
+    const additionalServiceSelect = document.getElementById('additional-service');
+
+    // Function to update form fields based on selected service
+    function updateFormFields() {
+      const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+      durationInput.value = selectedOption.getAttribute('data-duration');
+      priceInput.value = selectedOption.getAttribute('data-price');
+      staffInput.value = selectedOption.getAttribute('data-staff');
+      locationInput.value = selectedOption.getAttribute('data-location');
+    }
+
+    // Event listener for changes in the main service select
+    serviceSelect.addEventListener('change', function() {
+      updateFormFields();
+    });
+
+    // Event listener for changes in the additional service select
+    additionalServiceSelect.addEventListener('change', function() {
+      // Reset the main service select when an additional service is chosen
+      serviceSelect.value = '';
+      updateFormFields();
+    });
+
+    // Initial update of form fields
+    updateFormFields();
+  </script>
+             <!-- Confirmation message container -->
+  <div class="confirmation-container" id="confirmationContainer">
+    <h1>Appointment Confirmed</h1>
+    <p class="confirmation-message">Your appointment has been successfully booked!</p>
+  </div>
+
+
+  
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      showConfirmationMessage(); // Show confirmation message
+    });
+
+    function showConfirmationMessage() {
+      document.getElementById('bookingForm').style.display = 'none'; // Hide booking form
+      document.getElementById('confirmationContainer').style.display = 'block'; // Show confirmation message
+    }
+  </script>
+</body>
+</html>
